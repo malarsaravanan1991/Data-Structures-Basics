@@ -14,7 +14,10 @@ class Node
 Node* head;
 int list_size = 0;
 
-/* Function to create linked list */
+/* Function to create linked list 
+	* Time complexity : O(N)
+	* Space complextiy : O(N)
+*/
 Node* CreateLinkedList(int A[], int NumNodes)
 {
     Node* result;
@@ -28,9 +31,12 @@ Node* CreateLinkedList(int A[], int NumNodes)
     return result;
 }
 
-/* Function to traverse linked list */
+/* Function to traverse linked list 
+	* Time complexity : O(N)
+	* Space complextiy : O(N)*/
 
 void LinkedListTraversal()
+
 {   
     Node* temp = head;
     while(temp -> next != NULL)
@@ -40,7 +46,10 @@ void LinkedListTraversal()
     }
 }
 
-/* Function to insert a node to linked list */
+/* Function to insert a node to linked list 
+   * Time complexity : O(1) without considering link traversal
+   * Space complextiy : O(N)
+*/
 void InsertNodeLinkedList(int ElementToAdd, int position)
 {
     Node* result = head;
@@ -63,7 +72,9 @@ void InsertNodeLinkedList(int ElementToAdd, int position)
     result -> next = temp;
 }
 
-/* Function to delete a node from existing linked list */
+/* Function to delete a node from existing linked list 
+	* Time complexity : O(1) without considering link traversal
+	* Space complextiy : O(N)*/
 
 void DeleteNodeLinkedList (int position)
 {
@@ -78,7 +89,9 @@ void DeleteNodeLinkedList (int position)
     result -> next = result -> next -> next;
 }
 
-/*Reverse the given linked List */
+/*Reverse the given linked List 
+	* Time complexity : O(N) 
+    * Space complextiy : O(1)- inplace approach*/
 
 void ReverseLinkedList()
 {
@@ -96,7 +109,10 @@ void ReverseLinkedList()
    head = prev;
 }
 
-/* Implementation of reverse LinkedList using recursion Time : O(N) | Space : O(N)*/
+/* Implementation of reverse LinkedList using recursion 
+	* Time complexity : O(N) without considering link traversal
+    * Space complextiy : O(N) - implicit stack
+*/
 void ReverseLinkedListRecursion(Node* temp)
 {
     if (temp -> next == NULL)
